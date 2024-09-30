@@ -1,0 +1,613 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+* {
+    box-sizing: border-box; /* 包括边框和填充在内 */
+    max-width: 100%; /* 防止宽度超出 */
+}
+section{
+  width: 100%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* 深色半透明背景 */
+  padding: 10px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 更显著的阴影 */
+  position: fixed; /* 固定在顶部 */
+  width: 100%; /* 全宽 */
+  z-index: 1000; /* 保持在其他元素上方 */
+}
+
+.logo {
+  color:white;
+}
+
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+.scroll-trigger{
+      cursor: pointer;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+}
+
+/* home */
+.hero {
+    background: url('./img/homebackgournd.png');
+    background-position: center;
+
+    color: white;
+    /* padding: 60px 20px; */
+    height: 100vh; /* 使hero部分占满整个视口高度 */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.8); /* 深色半透明背景 */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* 更显著的阴影 */
+
+  padding: 10px 20px; /* 内边距 */
+  border-radius: 8px;
+
+  opacity: 0; /* 初始透明度 */
+  transform: translateY(20px); /* 初始位置 */
+  animation: fadeInUp 2s forwards; /* 动画效果 */
+}
+
+.headline{
+  color:black;
+}
+
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color:black;
+    margin: 20px 20px;
+}
+
+.cursor {
+    animation: blink 0.7s step-end infinite;
+    margin-left: 5px; /* 光标与文本之间的间距 */
+}
+
+
+
+
+
+.cta {
+    width: 120px;
+    display: inline-block;
+    background: #ff9800;
+    padding: 10px 10px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta:hover {
+    background: #e68900;
+}
+
+
+
+/* course */
+
+.courses {
+    padding: 20px;
+    height: fit-content;
+    background-color: black;
+    text-align: center;
+}
+/* .starcontainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.star {
+position: absolute;
+background: white;
+border-radius: 50%;
+opacity: 1;
+animation: blink 1.5s infinite alternate;
+} */
+.blockheader{
+  text-align: left;
+
+}
+.glow-box{
+  color:white;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.glow-box-p{
+  margin: 50px
+}
+.glow-line {
+    position: absolute; /* 设置绝对定位 */
+    top: 0; /* 对齐顶部 */
+    bottom: 0; /* 对齐底部 */
+    left: 0; /* 对齐左侧 */
+    right: 0; /* 对齐右侧 */
+    margin: 20px;
+    width: 2px; /* 线条宽度 */
+    background: linear-gradient(to top, orange 0%, orange 40%, transparent 100%); /* 渐变背景 */
+    box-shadow: 0 0 20px orange, 0 0 30px magenta; /* 荧光效果 */
+    animation: glow 1.5s ease-in-out infinite alternate; /* 动画 */
+}
+
+.glow-line::before {
+    content: '';
+    width: 2px; /* 线条宽度 */
+    height: 40%; /* 尖头高度 */
+    background: linear-gradient(to bottom, transparent, orange); /* 渐变效果 */
+    top: 0; /* 从顶部开始 */
+}
+
+.glow-line::after {
+    content: '';
+    width: 2px; /* 线条宽度 */
+    height: 40%; /* 尖头高度 */
+    background: linear-gradient(to top, transparent, orange); /* 渐变效果 */
+    bottom: 0; /* 从底部开始 */
+}
+.glow-line1 {
+  position: absolute; /* 设置绝对定位 */
+  top: 0; /* 对齐顶部 */
+  bottom: 0; /* 对齐底部 */
+  left: 0; /* 对齐左侧 */
+  right: 0; /* 对齐右侧 */
+  margin: 20px;
+  width: 2px; /* 线条宽度 */
+  background: linear-gradient(to top, purple 0%, orange 40%, transparent 100%); /* 渐变背景 */
+  box-shadow: 0 0 20px purple, 0 0 30px magenta; /* 荧光效果 */
+  animation: glow 1.5s ease-in-out infinite alternate; /* 动画 */
+}
+.glow-line1::before {
+    content: '';
+    width: 2px; /* 线条宽度 */
+    height: 40%; /* 尖头高度 */
+    background: linear-gradient(to bottom, transparent, orange); /* 渐变效果 */
+    top: 0; /* 从顶部开始 */
+}
+
+.glow-line1::after {
+    content: '';
+    width: 2px; /* 线条宽度 */
+    height: 40%; /* 尖头高度 */
+    background: linear-gradient(to top, transparent, orange); /* 渐变效果 */
+    bottom: 0; /* 从底部开始 */
+}
+@keyframes glow {
+    0% {
+        opacity: 0.8; /* 初始透明度 */
+        transform: scaleY(1); /* 初始大小 */
+    }
+    100% {
+        opacity: 1; /* 最终透明度 */
+        transform: scaleY(1.01); /* 放大效果 */
+    }
+}
+
+.course-about{
+
+  color: orange;
+  font-size:20px;
+}
+
+.course-box{
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.course-list{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 20px;
+    /* align-items: flex-end */
+}
+
+.course-item{
+    flex: 1;
+    margin: 10px 10px;
+    padding: 0px 20px;
+    background: #fff;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); */
+    text-align:left;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.course-item:hover {
+    transform: scale(1.05);
+}
+.more-info {
+    color: orange;
+    cursor: pointer;
+    font-size: 14px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s forwards; /* 使用动画 */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 开始时透明 */
+    }
+    to {
+        opacity: 1; /* 结束时不透明 */
+    }
+}
+.modal{
+  overflow-y: auto;
+}
+.modal-content {
+    padding: 0;
+    background-color: #fff;
+    opacity: 0.8;
+    color: black;
+    border-radius: 5px;
+    max-width: 800px;
+    width: 80%;
+    /* max-height: 80%; /* Set max height */
+    text-align: left;
+    position: relative; /* Relative positioning for absolute child */
+    max-height: 70vh; /* Set max height */
+    overflow: hidden; /* Prevent scrolling for modal content */
+}
+.modal-header {
+    padding: 20px;
+    position: relative; /* Positioning for the close button */
+}
+.close {
+    cursor: pointer;
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+    max-height: calc(70vh - 60px); /* Adjust for header height */
+    overflow-y: auto; /* Enable scrolling for body content only */
+}
+
+.modal-content h3 {
+    color: #ff9800; /* Orange title */
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+.description {
+    font-size: 1.1em;
+    margin: 15px 0;
+}
+.details, .requirements, .syllabus {
+    margin-top: 30px;
+    border-left: 4px solid #ff9800; /* Orange border */
+    padding-left: 15px;
+}
+.modal-content h4 {
+    color: #ff5722; /* Dark orange */
+}
+.modal-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.modal-content .btn {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background-color: #ff9800; /* Orange button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+.modal-content.btn:hover {
+    background-color: #e68900; /* Dark orange on hover */
+}
+
+.projects-about{
+  color: orange;
+  font-size:20px;
+    text-align: left;
+}
+
+.carousel-box {
+  background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    width: 40vw; /* 根据需要调整 */
+    height: 40vw; /* 根据需要调整 */
+    overflow: hidden;
+
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    object-fit: contain; /* 确保图像保持比例并完整显示 */
+}
+
+.active {
+    opacity: 1;
+}
+
+.team{
+  padding: 20px;
+}
+.teachers-box{
+  text-align: center;
+  margin: 50px 0px;
+}
+.teacher-card {
+    /* border: 1px solid #ddd;
+    border-radius: 5px; */
+    display: inline-block;
+    width: 180px;
+    transition: transform 0.3s;
+}
+
+.teacher-card:hover {
+    transform: scale(1.05);
+}
+.circle-image {
+    width: 150px; /* 设置适当的宽度 */
+    height: 150px; /* 设置相同的高度 */
+    border-radius: 50%; /* 使图片变成圆形 */
+    object-fit: cover; /* 确保图片不变形 */
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer input {
+    margin: 5px 0;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+}
+footer select {
+    margin: 5px 0;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+}
+footer button {
+    padding: 10px 20px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    width: 200px;
+    font-size: 16px;
+}
+
+footer button:hover {
+    background: #e68900;
+}
+.contact-info{
+  margin-top: 20px
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8); /* 深色半透明背景 */
+        padding: 15px 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 更显著的阴影 */
+        width: 150px;
+        border-radius: 5px;
+        opacity: 0; /* 初始透明度 */
+        transform: translateY(20px); /* 初始位置 */
+        animation: fadeInUp 1s forwards; /* 动画效果 */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .overlay {
+      width: 80%;
+    }
+    .courses{
+      display: block;
+      background-color: black;
+      margin: 0;
+    }
+    .starcontainer{
+      position: relative; /* 相对定位 */
+      width: 100%;
+      height: 100%;
+    }
+    .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 1;
+    animation: blink 1.5s infinite alternate;
+}
+
+
+@keyframes blink {
+    /* 0% { opacity: 0; } */
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.course-box{
+  margin-left: 10px;
+}
+    .course-list{
+        flex-direction: column;
+    }
+
+    .line-container {
+        display: flex;
+        flex-direction: column; /* 竖着排列 */
+        align-items: center; /* 垂直居中对齐 */
+        opacity: 0; /* 初始透明度为0 */
+        transform: translateY(-20px); /* 初始位置稍微偏下 */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* 添加过渡效果 */
+    }
+
+    .line-container.visible {
+        animation: slideDown 0.5s forwards; /* 应用动画 */
+    }
+    @keyframes slideDown {
+        to {
+            opacity: 1; /* 结束时完全可见 */
+            transform: translateY(0); /* 结束时在正常位置 */
+        }
+    }
+    .line {
+        width: 1px; /* 竖线宽度 */
+        height: 15px; /* 竖线高度 */
+        background-color: white; /* 竖线颜色 */
+    }
+
+    .circle {
+        width: 5px; /* 圆圈直径 */
+        height: 5px; /* 圆圈直径 */
+        background-color: white; /* 圆圈颜色 */
+        border-radius: 50%; /* 圆形 */
+        margin: 0; /* 圆圈的上下间距 */
+    }
+
+    .top-circle {
+        margin-bottom: 2px; /* 圆圈与竖线的间距 */
+    }
+
+    .bottom-circle {
+        margin-top: 2px; /* 圆圈与竖线的间距 */
+    }
+
+    .course-item{
+      margin: 0px 25px;
+      opacity: 0; /* 初始透明度为0 */
+      transform: translateY(-20px); /* 初始位置稍微偏下 */
+      transition: opacity 0.5s ease, transform 0.5s ease; /* 添加过渡效果 */
+    }
+    .course-item.visible {
+    opacity: 1; /* 变为可见 */
+    transform: translateY(0); /* 恢复到原位置 */
+}
+.carousel {
+    width: 60vw; /* 根据需要调整 */
+  height: 60vw; /* 根据需要调整 */}
+
+}
+
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* 最终透明度 */
+        transform: translateY(0); /* 最终位置 */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes blink {
+    50% {
+        opacity: 0; /* 光标闪烁效果 */
+    }
+}

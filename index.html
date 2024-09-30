@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Coding Program</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- header -->
+    <header>
+        <div class="logo">SKYLER</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="scroll-trigger" data-target="home">Home</a></li>
+                <li><a class="scroll-trigger" data-target="courses">Courses</a></li>
+                <li><a class="scroll-trigger" data-target="team">Teaching Team</a></li>
+                <li><a class="scroll-trigger" data-target="contact">Contact Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    <!-- course -->
+
+<!-- home -->
+    <section class="hero" id="home">
+        <div class="overlay">
+            <h1 class="headline" id="slogan">Coding Dreams, Building Futures!</h1>
+            <div class="typing-container">
+              <div class="typing-cursor">
+                <span id="typing-text"></span>
+                <span class="cursor">|</span>
+              </div>
+
+            </div>
+            <div class="buttons">
+                <a class="cta scroll-trigger" data-target="courses">Explore</a>
+                <a class="cta scroll-trigger" data-target="contact">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 课程介绍 -->
+    <section id="courses" class="courses">
+      <!-- <div class="starcontainer"id="starcontainer"></div> -->
+      <div class="blockheader">
+        <div class="glow-box">
+          <div class="glow-line" ></div>
+          <p class="glow-box-p">SKYLER's children's programming courses follow a scientific learning system <br>
+            transitioning from concrete thinking to logical thinking, and from concrete to abstract <br>
+            We provide different courses for students of different ages.
+          </p>
+
+        </div>
+
+        <div class="course-about" >
+          Courses
+        </div>
+      </div>
+      <div class="glow-box">
+        <div class="glow-line1" ></div>
+      <div class="course-box">
+        <div class="course-list">
+            <div id="Math" class="course-item" >
+                <h3>Math</h3>
+                <p>(6-14 years old)</p>
+                <p>Learn basic programming logic through Scratch and create animations and mini-games</p>
+                <p class="more-info">click to know more</p>
+            </div>
+            <div id="myMathModal" class="modal">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3>Skyler Math</h3>
+                  </div>
+                  <div class="modal-body">
+                    <p class="description">This is a brief introduction to the course, including objectives and content overview.</p>
+                    <div class="details">
+                        <h4>Course Details</h4>
+                        <p>In-depth course content and learning objectives, covering skills and knowledge enhancement.</p>
+                    </div>
+                    <div class="requirements">
+                        <h4>Course Requirements</h4>
+                        <ul>
+                            <li>No prerequisites</li>
+                            <li>Interest in learning programming</li>
+                        </ul>
+                    </div>
+                    <div class="syllabus">
+                        <h4>Course Syllabus</h4>
+                        <ul>
+                            <li>Week 1: Basic Concepts</li>
+                            <li>Week 2: Programming Practice</li>
+                            <li>Week 3: Project Development</li>
+                        </ul>
+                    </div>
+                    <a data-target="contact" class="btn scroll-trigger" onclick="register('Math')">Register Now</a>
+                  </div>
+                </div>
+            </div>
+            <div class="line-container" id="line-1">
+                <div class="circle top-circle"></div>
+                <div class="line"></div>
+                <div class="circle bottom-circle"></div>
+            </div>
+            <div id="Scratch"class="course-item" >
+              <h3>Scratch</h3>
+              <p>(8-10 years old)</p>
+                <p>Advanced graphics programming and initial learning of Python, learning concepts such as conditional statements and loops.</p>
+                <p class="more-info">click to know more</p>
+            </div>
+            <div id="myScratchModal" class="modal">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3>Skyler Scratch</h3>
+                  </div>
+                  <div class="modal-body">
+                    <p class="description">This is a brief introduction to the course, including objectives and content overview.</p>
+                    <div class="details">
+                        <h4>Course Details</h4>
+                        <p>In-depth course content and learning objectives, covering skills and knowledge enhancement.</p>
+                    </div>
+                    <div class="requirements">
+                        <h4>Course Requirements</h4>
+                        <ul>
+                            <li>No prerequisites</li>
+                            <li>Interest in learning programming</li>
+                        </ul>
+                    </div>
+                    <div class="syllabus">
+                        <h4>Course Syllabus</h4>
+                        <ul>
+                            <li>Week 1: Basic Concepts</li>
+                            <li>Week 2: Programming Practice</li>
+                            <li>Week 3: Project Development</li>
+                        </ul>
+                    </div>
+                    <a data-target="contact" class="btn scroll-trigger" onclick="register('Scratch')">Register Now</a>
+                  </div>
+                </div>
+            </div>
+            <div class="line-container" id="line-1">
+                <div class="circle top-circle"></div>
+                <div class="line"></div>
+                <div class="circle bottom-circle"></div>
+            </div>
+            <div id="Python" class="course-item">
+              <h3>Python</h3>
+              <p>(10-12 years old)</p>
+                <p>Python programming and robotics, developing AI games or smart projects.</p>
+                <p class="more-info">click to know more</p>
+            </div>
+            <div id="myPythonModal" class="modal">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3>Skyler Python</h3>
+                  </div>
+                  <div class="modal-body">
+                    <p class="description">This is a brief introduction to the course, including objectives and content overview.</p>
+                    <div class="details">
+                        <h4>Course Details</h4>
+                        <p>In-depth course content and learning objectives, covering skills and knowledge enhancement.</p>
+                    </div>
+                    <div class="requirements">
+                        <h4>Course Requirements</h4>
+                        <ul>
+                            <li>No prerequisites</li>
+                            <li>Interest in learning programming</li>
+                        </ul>
+                    </div>
+                    <div class="syllabus">
+                        <h4>Course Syllabus</h4>
+                        <ul>
+                            <li>Week 1: Basic Concepts</li>
+                            <li>Week 2: Programming Practice</li>
+                            <li>Week 3: Project Development</li>
+                        </ul>
+                    </div>
+                    <a data-target="contact" class="btn scroll-trigger" onclick="register('Python')">Register Now</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div></div>
+      <div class="projects-about">
+        Student projects
+      </div>
+
+    </section>
+
+    <div class="carousel-box">
+        <div class="carousel" onclick="stopCarousel()">
+            <img class="carousel-image active" src="./img/project1.png" alt="学生作品1">
+            <img class="carousel-image" src="./img/project2.jpg" alt="学生作品2">
+            <img class="carousel-image" src="./img/project3.png" alt="学生作品3">
+        </div>
+    </div>
+    <section class="team" id="team">
+        <h2>Meet Our Teaching Team</h2>
+        <div class="teachers-box">
+          <div class="teacher-card">
+              <img src="./img/teacher1.png" alt="Teacher 1" class="circle-image">
+              <h3>Jane Doe</h3>
+              <p>Expert in Python and game design.</p>
+          </div>
+          <div class="teacher-card">
+              <img src="./img/teacher2.png" alt="Teacher 2" class="circle-image">
+              <h3>John Smith</h3>
+              <p>Passionate about teaching coding to kids.</p>
+          </div>
+          <div class="teacher-card">
+              <img src="./img/teacher3.png" alt="Teacher 3" class="circle-image">
+              <h3>Jane Doe</h3>
+              <p>Expert in Python and game design.</p>
+          </div>
+          <div class="teacher-card">
+              <img src="./img/teacher4.png" alt="Teacher 4"class="circle-image">
+              <h3>John Smith</h3>
+              <p>Passionate about teaching coding to kids.</p>
+          </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="contact" id="contact">
+            <h2>Sign up for a free trial class</h2>
+            <form id="signupForm" method="POST" action="https://formspree.io/f/xnnaejgr" >
+                <input type="text" placeholder="Student Name" name="Name" required>
+                <input type="number" placeholder="Student Age" name="Age" min="0" max="120" required>
+                <input type="tel" placeholder="Phone" name="Phone"required>
+                <select id="expectedCourse" placeholder="Expected Course" name="expectedCourse" required>
+                    <option value="Math">Math</option>
+                    <option value="Scratch">Scratch</option>
+                    <option value="Python">Python</option>
+                </select>
+                <button type="submit">Sign up</button>
+            </form>
+            <div class="contact-info">
+                <p>phone: 123-456-7890</p>
+                <p>email: info@codingfuture.com</p>
+                <p>address: XXXXXXX</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
