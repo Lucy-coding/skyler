@@ -448,12 +448,14 @@ footer input {
     padding: 10px;
     width: 200px;
     height: 40px;
+    border-radius:5px;
 }
 footer select {
     margin: 5px 0;
     padding: 10px;
     width: 200px;
     height: 40px;
+    border-radius:5px;
 }
 footer button {
     padding: 10px 20px;
