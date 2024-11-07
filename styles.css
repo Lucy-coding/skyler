@@ -25,10 +25,22 @@ header {
 }
 
 .logo {
+  display: flex;          /* 设置容器为 Flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center;    /* 垂直居中 */
   color:white;
 }
 
-
+.logo img{
+  width: 30px;
+  height:30px;
+  margin-right: 10px;
+  border-radius: 50%; /* 使图片变成圆形 */
+  object-fit: cover; /* 确保图片不变形 */
+}
+.logo p{
+  margin: 0
+}
 .nav-links {
     list-style: none;
     padding: 0;
